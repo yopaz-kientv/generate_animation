@@ -21,6 +21,6 @@ pipe.scheduler = EulerDiscreteScheduler.from_config(pipe.scheduler.config, times
 num_images = 10
 
 for i in range(num_images):
-    output = pipe(prompt="Barack Obama.", guidance_scale=1.0, num_inference_steps=step)
+    output = pipe(prompt="A very beautiful girl.", guidance_scale=1.0, num_inference_steps=step)
     current_time = datetime.now().strftime("%d-%m-%Y %H-%M-%S")
     export_to_gif(output.frames[0], f"animation-{current_time}.gif")
